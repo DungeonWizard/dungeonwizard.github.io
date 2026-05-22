@@ -3,14 +3,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <title>The Dungeon</title>
-  <style> * { margin-block-start: 0.3px; margin-block-end: 0.3px; background-color: black; } body { margin: 0; padding: 5px; background-color: black; color: #00ff00; font-family: "Geo"; } h1, h2, h3 { color: #00ff00; font-family: "Orbitron"; } h2 { color: chartreuse; } h3 { color: yellow; } a { color: #00ff00; text-decoration: none; } a:hover { text-decoration: underline; } .terminal-box { border: 1px solid #00ff00; padding: 5px; margin-left: 30px; margin-top: 10px; background: rgba(0, 255, 0, 0.03); } .cursor { display: inline-block; width: 10px; background: #00ff00; animation: blink 1s infinite; } @keyframes blink { 50% { opacity: 0; } }
-  </style>
+  <style> * { margin-block-start: 0.2px; margin-block-end: 0.2px; background-color: black; } body { margin: 0; padding: 5px; background-color: black; color: #00ff00; font-family: "Geo"; } h1, h2, h3 { color: #00ff00; font-family: "Orbitron"; margin-bottom: 5px; margin-top: 5px; } h2 { color: chartreuse; } h3 { color: yellow; } a { color: #00ff00; text-decoration: none; } a:hover { text-decoration: underline; } .terminal-box { border: 1px solid #00ff00; padding: 5px; margin-top: 3px; background: rgba(0, 255, 0, 0.03); } .cursor { display: inline-block; width: 10px; background: #00ff00; animation: blink 1s infinite; } @keyframes blink { 50% { opacity: 0; } } </style>
 </head>
 <body>
   <div>
     <h1>> the dungeon<span class="cursor">&nbsp;</span></p></h1>
 	<h2 id="subheading"></h2>
-	<h3>>>> test3</h3>
+	<h3>test3</h3>
+    <div class="terminal-box">
+      <p>testing...</p>
+    </div>
+	<h3>test4</h3>
     <div class="terminal-box">
       <p>testing...</p>
     </div>
@@ -20,7 +23,7 @@
 function get_random(arr) { return arr[Math.floor(Math.random()*arr.length)] }
 function generate_random_subheading()
 {
-	document.getElementById("subheading").innerHTML = ">> "+get_random(["test1","test2"])
+	document.getElementById("subheading").innerHTML = get_random(["test1","test2"])
 }
 generate_random_subheading(); // Generate a random subheading on page load.
 </script>
