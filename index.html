@@ -1,14 +1,17 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <title>The Dungeon</title>
-  <style> body { margin: 0; padding: 5px; background-color: #000; color: #00ff00; font-family: "Courier New", Courier, monospace; } h1, h2, h3 { color: #00ff00; } a { color: #00ff00; text-decoration: none; } a:hover { text-decoration: underline; } .container { margin: 0 auto; } .terminal-box { border: 1px solid #00ff00; padding: 5px; margin-top: 10px; background: rgba(0, 255, 0, 0.03); }
+  <style> * { margin-block-start: 0.3px; margin-block-end: 0.3px; } body { margin: 0; padding: 5px; background-color: #000; color: #00ff00; font-family: "Geo"; } h1, h2, h3 { color: #00ff00; font-family: "Orbitron"; } a { color: #00ff00; text-decoration: none; } a:hover { text-decoration: underline; } .terminal-box { border: 1px solid #00ff00; padding: 5px; background: rgba(0, 255, 0, 0.03); } .cursor { display: inline-block; width: 10px; background: #00ff00; animation: blink 1s infinite; } @keyframes blink { 50% { opacity: 0; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>The Dungeon</h1>
+  <div>
+    <h1>> the dungeon<span class="cursor">&nbsp;</span></p></h1>
 	<h2 id="subheading"></h2>
     <div class="terminal-box">
-      <p>Testing...</p>
+      <p>testing...</p>
     </div>
   </div>
 </body>
