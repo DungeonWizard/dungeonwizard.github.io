@@ -1,21 +1,23 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Dungeon</title>
-  <style>
-    body { margin: 0; padding: 5px; background-color: #000; color: #00ff00; font-family: "Courier New", Courier, monospace; }
-    h1, h2, h3 { color: #00ff00; }
-    a { color: #00ff00; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { max-width: 900px; margin: 0 auto; }
-    .terminal-box { border: 1px solid #00ff00; padding: 5px; margin-top: 10px; background: rgba(0, 255, 0, 0.03); }
+  <style> body { margin: 0; padding: 5px; background-color: #000; color: #00ff00; font-family: "Courier New", Courier, monospace; } h1, h2, h3 { color: #00ff00; } a { color: #00ff00; text-decoration: none; } a:hover { text-decoration: underline; } .container { margin: 0 auto; } .terminal-box { border: 1px solid #00ff00; padding: 5px; margin-top: 10px; background: rgba(0, 255, 0, 0.03); }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>ACCESS GRANTED</h1>
+    <h1>The Dungeon</h1>
+	<h2 id="subheading"></h2>
     <div class="terminal-box">
-      <p>> Testing...</p>
-      <p>> Welcome.</p>
+      <p>Testing...</p>
     </div>
   </div>
 </body>
+<script>
+function get_random(arr) { return arr[Math.floor(Math.random() * arr.length())] }
+function generate_random_subheading()
+{
+	document.getElementById("subheading").innerHTML = get_random(["test1","test2"])
+}
+generate_random_subheading(); // Generate a random subheading on page load.
+</script>
 </html>
