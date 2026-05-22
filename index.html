@@ -13,7 +13,7 @@
   </div>
 </body>
 <script>
-function get_random(arr) { return arr[Math.floor(Math.random() * arr.length())] }
+function get_random(arr) { return arr[Math.floor(Math.random()*arr.length)] }
 function generate_random_subheading()
 {
 	document.getElementById("subheading").innerHTML = get_random(["test1","test2"])
