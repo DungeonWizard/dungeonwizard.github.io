@@ -1,51 +1,36 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!---------------------------------------------------------->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&amp;display=swap" rel="stylesheet">
   <!---------------------------------------------------------->
   <title>The Dungeon</title>
   <!---------------------------------------------------------->
-  <style>* { margin-block-start: 0.2px; margin-block-end: 0.2px; background-color: black; } body { margin: 0; padding: 5px; background-color: black; color: #00ff00; font-family: "Quantico"; font-weight: 400; } h1, h2, h3 { color: #00ff00; font-family: "Orbitron"; font-weight: 400; margin-bottom: 5px; margin-top: 5px; } h2 { color: chartreuse; font-size: 16px; } h3 { color: yellow; font-size: 16px; } a { color: #00ff00; text-decoration: none; } a:hover { color: cyan; } .terminal-box { border: 1px dashed #00ff00; padding: 5px; margin-top: 3px; background: rgba(0, 255, 0, 0.03); } .cursor { display: inline-block; width: 10px; background: #00ff00; animation: blink 1s infinite; } @keyframes blink { 50% { opacity: 0; } } ul { padding-inline-start: 0px; } hr { border: 1px dashed #00ff00; } </style>
+  <style>
+	* {background-color:#121212;color:white;font-family:monospace;}
+	.pageTitle {font-family:'Acme'}.collapsible {background-color:#121212;color:white;cursor:pointer;padding:0.5px 0.5px 1px 0.5px;width:100%;border:none;text-align:left;outline:none;margin:0px; }
+	.active, .collapsible:hover {background-color:#1e1e1e;}
+	.content {padding:0 4px;display:none;overflow:hidden;}
+	hr {margin-block-start:0px;margin-block-end:0px;border-color:#444;}
+	h1 {font-size:1.5em;margin-block-start:0.2em;margin-block-end:0.2em;font-weight:normal;}
+	h2 {font-size:1.0em;margin-block-start:0px;margin-block-end:0px;font-weight:normal;background-image:linear-gradient(to right, #1e1e1e, #121212);border:1px solid #1e1e1e; }
+	h3 {font-size:11px;margin-block-start:0.05em;margin-block-end:0.05em;font-weight:normal;}
+	h4 {font-size:0.8em;margin-block-start:0.4em;margin-block-end:0.4em;font-weight:normal;}
+	p {margin-block-start:0.3em;margin-block-end:0.3em;font-size:11px; }
+	li,ol,ul {font-size:11px;}
+	meter, meter::-webkit-meter-bar {background-color:inherit;background:black;border-radius:5px;} meter::-webkit-meter-optimum-value {background:#87aca5}
+	ol,ul {margin-block-start:0.3em;margin-block-end:0.3em;}
+	::-webkit-scrollbar {width: 10px;} ::-webkit-scrollbar-track {background: #121212;} ::-webkit-scrollbar-thumb {background: #1e1e1e;} ::-webkit-scrollbar-thumb:hover {background: #555;}
+  </style>
   <!---------------------------------------------------------->
 </head>
 <body>
-  <div>
-    <hr>
-	<!---------------------------------------------------------->
-    <h1>> the dungeon<span class="cursor">&nbsp;</span></p></h1>
-	<h2 id="subheading"></h2>
-	<!---------------------------------------------------------->
-	<hr>
-	<!---------------------------------------------------------->
-	<h3>quicksearch</h3>
-	<a href="#test3">test3</a></li> <a href="#test4">test4</a></li>
-	<hr style='margin-top:8px;'>
-	<!---------------------------------------------------------->
-	<h3>test3</h3>
-    <div class="terminal-box">
-      <p>testing...</p>
-    </div>
-	<!---------------------------------------------------------->
-	<h3>test4</h3>
-    <div class="terminal-box">
-      <p>testing...</p>
-    </div>
-	<!---------------------------------------------------------->
-  </div>
-  <br>
-  <hr>
+
 </body>
 <script>
 //----------------------------------------------------------------------------
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function get_random(arr) { return arr[Math.floor(Math.random()*arr.length)]; }
-//----------------------------------------------------------------------------
-function generate_random_subheading()
-{
-	document.getElementById("subheading").innerHTML = "<i>"+get_random(["test1","test2"])+"</i>";
-}
-//----------------------------------------------------------------------------
-generate_random_subheading(); // Generate a random subheading on page load.
 //----------------------------------------------------------------------------
 </script>
 </html>
