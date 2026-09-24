@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Acme&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&amp;display=swap" rel="stylesheet">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Acme&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&amp;display=swap" rel="stylesheet"><script src="generator.js"></script>
   <!---------------------------------------------------------->
   <title>the dungeon</title>
   <!---------------------------------------------------------->
@@ -6,12 +6,12 @@
 	* {background-color:#121212;color:white;font-family:monospace;padding:0px;margin:0px;margin-block-start:0px;margin-block-end:0px;}
 	.pageTitle {font-family:'Acme';display:inline;color:white;}
 	hr {margin-block-start:0px;margin-block-end:0px;border-color:#444;}
-	h1 {font-size:24px;margin-block-start:0.1em;margin-block-end:0.1em;font-weight:normal;}
+	h1 {font-size:24px;margin-block-start:0.1em;margin-block-end:0.1em;font-weight:normal;background-image:linear-gradient(to right, #1e1e1e, #121212);}
 	h2 {font-size:18px;margin-block-start:0px;margin-block-end:0px;font-weight:normal;background-image:linear-gradient(to right, #1e1e1e, #121212);border:1px solid #1e1e1e; }
 	h3 {font-size:14px;margin-block-start:0.05em;margin-block-end:0.05em;font-weight:normal;}
 	h4 {font-size:0.8em;margin-block-start:0.4em;margin-block-end:0.4em;font-weight:normal;}
 	p {margin-block-start:0.3em;margin-block-end:0.3em;font-size:12px; }
-	a {font-size:14px;color:#87aca5;font-family:'Acme';text-decoration:none;} /* completed: #b8ffb8, incomplete: #ffb8b8 */
+	a {font-size:14px;color:#87aca5;font-family:'Acme';text-decoration:none;} /* green: #b8ffb8, red: #ffb8b8 */
 	li,ol,ul {font-size:11px;}
 	meter, meter::-webkit-meter-bar {background-color:inherit;background:black;border-radius:5px;} meter::-webkit-meter-optimum-value {background:#87aca5}
 	ol,ul {margin-block-start:0.3em;margin-block-end:0.3em;}
@@ -28,135 +28,25 @@
 	<h1 class="pageTitle">the dungeon</h1>
   </div>
   <div style="display:flex;justify-content:center;align-items:center;">
-	<p id="random"><i></i></p>
+	<p id="random" onclick="generate()"><i></i></p>
   </div>
   <div style="display:flex;justify-content:center;align-items:center;">
-	<p style="display:inline;color:lightgrey;">last updated <b>September 2026</b></p>
+	<p style="display:inline;color:lightgrey;">cybersecurity projects and other tomfoolery • made by <a href="https://github.com/DungeonWizard" style="color:white;" target="_blank">a human</a> • last updated <b>September 2026</b></p>
   </div>
   <hr>
   <!---------------------------------------------------------->
-</body>
-<script>
+  <div id="passiveenumeration">testing...</div>
+  <script>
+	fetch("passiveenumeration.html")
+	  .then(response => response.text())
+	  .then(html => { document.getElementById("passiveenumeration").innerHTML = html; });
+  </script>
+</body><script>
 //----------------------------------------------------------------------------
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 function get_random(arr) { return arr[Math.floor(Math.random()*arr.length)]; }
 //----------------------------------------------------------------------------
-function generate() {
-	var r = document.getElementById("random");
-	r.style.opacity = "0";
-	setTimeout(() => {
-		r.innerHTML = get_random([
-			"a potato flew around my room before you came.",
-			"all your base are belong to us.",
-			"an eye for an eye makes the whole world blind.",
-			"and they were roommates.",
-			"anybody on our side hiding any shocking and fantastic abilities they'd like to disclose? i'm open to suggestions.",
-			"as far as i'm concerned, that's america's ass.",
-			"avengers, assemble.",
-			"back at it again at krispy kreme.",
-			"but my lord, there is no such force.",
-			"buying gf.",
-			"chris, is that a weed? i'm calling the police.",
-			"do you think god stays in heaven because he, too, lives in fear of what he's created?",
-			"don't make me tap the sign.",
-			"dormammu, i've come to bargain.",
-			"dude, you're embarrassing me in front of the wizards.",
-			"friendship ended with mudasir, now salman is my best friend.",
-			"get to del taco, they got a new thing called fre shavoca do.",
-			"happy christmas. it's christmas. merry crisis. merry chrysler.",
-			"he's from space, he came here to steal a necklace from a wizard.",
-			"hurricane katrina? more like hurricane tortilla.",
-			"i always say, keep your friends rich and your enemies rich and wait to find out which is which.",
-			"i am an architect.",
-			"i am confusion. why is this one kansas but this one is not arkansas? america, explain. explain. what do you mean arkansas.",
-			"i am inevitable.",
-			"i am once again asking for your financial support.",
-			"i can't believe you've done this.",
-			"i feel god in this chili's tonight.",
-			"i have a question. for god. why?",
-			"i have successfully privatized world peace.",
-			"i like trains.",
-			"i like turtles.",
-			"i must not fear. fear is the mind-killer. fear is the little-death that brings total obliteration.",
-			"i never went to oovoo javer.",
-			"i recognize the council has made a decision, but given that it's a stupid-ass decision, i've elected to ignore it.",
-			"i see dead people.",
-			"i see this as an absolute win.",
-			"i understood that reference.",
-			"i used the stones to destroy the stones.",
-			"i wanna be a cowboy.",
-			"i'm a huge fan of the way you lose control and turn into an enormous green rage monster.",
-			"i'm escaping to the one place that hasn't been corrupted by capitalism. space.",
-			"i'm glad you asked that, because i wanted to take this time to explain my evil plan.",
-			"i'm sorry, earth is closed today.",
-			"i'm sorry, little one.",
-			"i'm still worthy.",
-			"i'm sure he died of natural causes. like a massive dragon or something.",
-			"i've never met this man in my life.",
-			"if you're nothing without the suit, then you shouldn't have it.",
-			"iridocyclitis.",
-			"is this a pigeon?",
-			"is this the real life? is this just fantasy?",
-			"it is pitch black. you are likely to be eaten by a grue.",
-			"it is wednesday my dudes.",
-			"it's a simple spell, but quite unbreakable.",
-			"it's free real estate.",
-			"it's morbin' time.",
-			"like a red cape, but blue.",
-			"look at all those chickens.",
-			"look on my works, ye mighty, and despair.",
-			"mary, is that a police? i'm calling the weed.",
-			"mr. stark, i don't feel so good.",
-			"never interrupt your enemy when he is making a mistake.",
-			"never let mod timbo near a thing of beauty.",
-			"no off topic questions. because i don't want to. no. no. permission denied. that's an off topic question. next. you have been stopped.",
-			"nothing interesting happens.",
-			"now i am become death, destroyer of worlds.",
-			"now that is an avengers-level threat.",
-			"oh hi, thanks for checking in, i'm still a piece of garbage.",
-			"oh my god, they were roommates.",
-			"on your left.",
-			"one does not simply walk into mordor.",
-			"perfectly balanced, as all things should be.",
-			"pokemon go to the polls.",
-			"reality can be whatever i want.",
-			"road work ahead? yeah, i sure hope it does.",
-			"shaken, not stirred.",
-			"stop examining signs, you're in the wilderness now!",
-			"stop, i coulda dropped my croissant.",
-			"that man has no regard for lawn maintenance.",
-			"that man is playing galaga. thought we wouldn't notice.",
-			"that's what she said.",
-			"the cake is a lie.",
-			"the hardest choices require the strongest wills.",
-			"the most versatile substance on the planet, and they used it to make a frisbee.",
-			"the power of christ compels you.",
-			"they ask you how you are and you just have to say that you're fine, and you're not really fine but you just can't get into it.",
-			"this is a potion bottle, not a klein bottle.",
-			"this is the dollar store, how good can it be?",
-			"this too shall pass.",
-			"this was a triumph. i'm making a note here, huge success.",
-			"to become god is the loneliest achievement of them all.",
-			"tony stark was able to build this in a cave, with a box of scraps.",
-			"violence for violence is the rule of beasts.",
-			"we don't do that here.",
-			"welcome to chili's.",
-			"well, when life gives you lemons...",
-			"what are those?",
-			"when the earth starts to settle, god throws a stone at it. and believe me, he's winding up.",
-			"when will you learn? when will you learn that your actions have consequences?",
-			"why are you running? why are you running?",
-			"you could not live with your own failure. where did that bring you? back to me.",
-			"you guys are getting paid?",
-			"you know, i'm something of a scientist myself.",
-			"you like jazz?",
-			"you're the spider...ling. crime fighting spider. spider boy?",
-		]);
-		r.style.opacity = "1";
-	}, 500);
-}
 generate();
 setInterval(generate, 30000);
 //----------------------------------------------------------------------------
-</script>
-</html>
+</script></html>
