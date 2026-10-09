@@ -1,1 +1,21 @@
-<p>test worked!</p>
+<h1 class="pageTitle" style="color:#87aca5;">passive DNS enumeration</h1>
+<p><i>passive OSINT enumeration of DNS records <span style="font-size:9px;color:lightgrey;">(A/AAAA, CNAME, MX, SOA/NS, SRV, TXT)</span> and domains and subdomains using public DNS</i></p>
+<!---------------------------------------------------------->
+<hr>
+<script>
+function addCollapsibleListeners() {
+ var coll = document.getElementsByClassName('collapsible');
+ for (var i = 0; i < coll.length; i++) {
+  if (!coll[i].dataset.listenerAdded) {
+   coll[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    var content = this.nextElementSibling;
+    if (content.style.display === 'block') { content.style.display = 'none'; } else { content.style.display = 'block'; }
+   }
+   );
+   coll[i].dataset.listenerAdded = 'true';
+  }
+ }
+}
+addCollapsibleListeners();
+</script>
